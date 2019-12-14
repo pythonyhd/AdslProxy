@@ -50,7 +50,7 @@ class SenderAdsl(object):
         """
         proxies = {
             'http': 'http://{}:{}@{}:{}'.format(USER_NAME, PASSWORD, proxy, PROXY_PORT),
-            'https': 'http://{}:{}@{}:{}'.format(USER_NAME, PASSWORD, proxy, PROXY_PORT),
+            'https': 'https://{}:{}@{}:{}'.format(USER_NAME, PASSWORD, proxy, PROXY_PORT),
         }
         headers = {'User-Agent': UserAgent().random}
         try:
