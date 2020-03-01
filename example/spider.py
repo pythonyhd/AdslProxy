@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2019/12/13 11:17
-# @Author  : King life
-# @Email   : 18353626676@163.com
-# @File    : spider.py
-# @Software: PyCharm
 import random
 
 import redis

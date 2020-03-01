@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2019/12/12 11:18
-# @Author  : King life
-# @Email   : 18353626676@163.com
-# @File    : config.py
-# @Software: PyCharm
 
 
 # redis连接配置

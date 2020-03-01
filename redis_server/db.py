@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2019/12/11 15:52
-# @Author  : King life
-# @Email   : 18353626676@163.com
-# @File    : db.py
-# @Software: PyCharm
 """
 存储器，存储拨号成功后的IP，Hash监控每台拨号机器拨号情况
 """
@@ -78,18 +73,12 @@ class RedisClient(object):
         return self.db.hvals(self.proxy_key)
 
     def random(self):
-        """
-        随机获取代理
-        :return:
-        """
+        """ 随机获取代理 """
         proxies = self.proxies()
         return random.choice(proxies)
 
     def all(self):
-        """
-        获取字典
-        :return:
-        """
+        """ 获取字典 """
         return self.db.hgetall(self.proxy_key)
     
     

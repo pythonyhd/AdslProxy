@@ -1,12 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2019/12/11 16:44
-# @Author  : King life
-# @Email   : 18353626676@163.com
-# @File    : main.py
-# @Software: PyCharm
-"""
-拨号主模块
-"""
 import re
 import platform
 import time
@@ -62,20 +54,13 @@ class SenderAdsl(object):
             return False
 
     def remove_proxy(self):
-        """
-        移除代理
-        :return: None
-        """
+        """ 移除代理 """
         url = '{}/remove?name={}'.format(REDIS_URI, CLIENT_NAME)
         res = requests.get(url=url)
         print(res.text)
 
     def add_proxy(self, proxy):
-        """
-        添加代理
-        :param proxy: 代理
-        :return: None
-        """
+        """ 添加代理 """
         url = '{}/put?name={}&proxy={}'.format(REDIS_URI, CLIENT_NAME, proxy)
         res = requests.get(url=url)
         print(res.text)
@@ -86,7 +71,6 @@ class SenderAdsl(object):
         ADSL代码优化，保证拨号前把IP删掉，
         确保入库的IP在拨号前都是可用的。
         执行删除后再次休眠10秒，确保取出来的IP最少能用10秒
-        :return: None
         """
         while True:
             try:

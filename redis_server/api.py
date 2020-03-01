@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2019/12/11 15:52
-# @Author  : King life
-# @Email   : 18353626676@163.com
-# @File    : api.py
-# @Software: PyCharm
 """
 flask提供代理的增删接口
 需要nginx部署，保证redis能被访问，才能进行对应的增删操作
@@ -30,9 +25,7 @@ def index():
 
 @app.route('/put')
 def upload_proxy():
-    """
-    将proxy上传到redis数据库中
-    """
+    """ 将proxy上传到redis数据库中 """
     conn = get_conn()
     proxy = request.args.get("proxy")
     name = request.args.get("name")
@@ -47,9 +40,7 @@ def upload_proxy():
 
 @app.route('/remove')
 def remove_proxy():
-    """
-    删除redis中的代理
-    """
+    """ 删除redis中的代理 """
     conn = get_conn()
     name = request.args.get("name")
     if not name:

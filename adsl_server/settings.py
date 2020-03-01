@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2019/12/11 16:09
-# @Author  : King life
-# @Email   : 18353626676@163.com
-# @File    : settings.py
-# @Software: PyCharm
 """
 IP存活时间保持在10-120秒之间
 """
